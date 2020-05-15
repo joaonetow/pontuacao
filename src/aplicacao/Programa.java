@@ -22,10 +22,10 @@ public class Programa {
 		int quantidadeCompras;
 		double ticketMedio;
 		
-		System.out.print("Quantas compras o cliente fez no último ano?");
+		System.out.print("Quantas compras o cliente fez no último ano? ");
 		quantidadeCompras = sc.nextInt();
 		
-		System.out.print("Qual o ticket médio?");
+		System.out.print("Qual o ticket médio? ");
 		ticketMedio = sc.nextDouble();
 
 		//LEITURA DOS OUTROS DADOS
@@ -33,12 +33,39 @@ public class Programa {
 		int quantidadeAtrasos;
 		char formaPagamento;		
 				
-		System.out.print("Quantas vezes o cliente atrasou o pagamento?");
+		System.out.print("Quantas vezes o cliente atrasou o pagamento? ");
 		quantidadeAtrasos = sc.nextInt();
 				
-		System.out.print("A maioria das compras foi em dinheiro, cartão, ou boleto (D/C/B)?");
+		System.out.print("A maioria das compras foi em dinheiro, cartão, ou boleto (D/C/B) ?");
 		formaPagamento = sc.next().charAt(0);
 
+		//SCORE VOLUME COMPRAS
+		
+				
+		int scoreVolumeCompras;
+				
+				
+		if(quantidadeCompras == 0) {
+					
+					scoreVolumeCompras = 0;					
+				} 
+		
+		else if (quantidadeCompras * ticketMedio <= 3000 && quantidadeCompras <= 2 ) {
+					
+					scoreVolumeCompras = 20;					
+				} 
+		
+		else if (quantidadeCompras * ticketMedio >= 3000 && quantidadeCompras > 2 ) {
+					
+					scoreVolumeCompras = 30;				
+				} 
+		
+		else {
+					scoreVolumeCompras = 40;					
+				} 
+				
+				System.out.println();
+				System.out.printf("Score de volume de compras = %d pontos%n", scoreVolumeCompras);
 		
 	}
 	
