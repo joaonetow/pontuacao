@@ -66,7 +66,43 @@ public class Programa {
 				
 				System.out.println();
 				System.out.printf("Score de volume de compras = %d pontos%n", scoreVolumeCompras);
+				
+				
+		 //SCORES INADIMPLENCIA E PAGAMENTO
+				
+				
+		int scoreInadimplencia;
+				
+		if(quantidadeAtrasos > 1 ||  quantidadeCompras == 0) {
+					
+					scoreInadimplencia = 0;					
+				} 
+		else if (quantidadeCompras > 0 && quantidadeAtrasos >= 1) {
+					
+					scoreInadimplencia = 15;					
+				} 
+		else {
+					
+					scoreInadimplencia = 30;
+				}
+				
+				System.out.println();
+				System.out.printf("Score de inadimplência = %d pontos %n", scoreInadimplencia);
+				
+				
+		int scoreFormaPagamento = 0;
+				
+		if(quantidadeCompras > 0 && formaPagamento == 'D') {
+					
+					scoreFormaPagamento = 5;
+		       } 
 		
+		else if(quantidadeCompras > 0) {
+					
+					scoreFormaPagamento = 10;
+				} 		
+				
+				System.out.printf("Score de forma de pagamento = %d %n", scoreFormaPagamento);
 	}
 	
 }
