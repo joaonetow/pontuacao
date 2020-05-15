@@ -15,8 +15,22 @@ public class Programa {
 		System.out.println();
 		System.out.println();
 		
+	   //LEITURA DO VOLUME
+		
+		int quantidadeCompras;
+		double ticketMedio;
+		
+		System.out.print("Quantas compras o cliente fez no último ano?");
+		quantidadeCompras = sc.nextInt();
+		
+		System.out.print("Qual o ticket médio?");
+		ticketMedio = sc.nextDouble();
+
+		
 		
 	}
 	
 }
+
+
 
