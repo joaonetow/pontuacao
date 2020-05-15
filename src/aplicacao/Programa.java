@@ -36,7 +36,7 @@ public class Programa {
 		System.out.print("Quantas vezes o cliente atrasou o pagamento? ");
 		quantidadeAtrasos = sc.nextInt();
 				
-		System.out.print("A maioria das compras foi em dinheiro, cartão, ou boleto (D/C/B) ?");
+		System.out.print("A maioria das compras foi em dinheiro, cartão, ou boleto (D/C/B) ? ");
 		formaPagamento = sc.next().charAt(0);
 
 		//SCORE VOLUME COMPRAS
@@ -103,6 +103,31 @@ public class Programa {
 				} 		
 				
 				System.out.printf("Score de forma de pagamento = %d %n", scoreFormaPagamento);
+				
+		 // CLASSIFICACAO FINAL
+				
+				
+			System.out.println();
+				
+			int scoreTotal = scoreFormaPagamento + scoreInadimplencia + scoreVolumeCompras;
+				
+			if(scoreTotal >= 0 && scoreTotal <= 25) {
+					
+					System.out.println("Classificação final = CLIENTE BRONZE");
+					
+				} 
+			
+			else if (scoreTotal > 25 && scoreTotal <= 75) {
+					
+					System.out.println("Classificação final = CLIENTE PRATA");
+					
+				} 
+			
+			else {
+					
+					System.out.println("Classificação final = CLIENTE OURO");
+					
+				}
 	}
 	
 }
