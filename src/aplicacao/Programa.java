@@ -1,11 +1,13 @@
 package aplicacao;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Programa {
 	
 	public static void main(String[] args) {
 		
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System .in);
 		
 		//CABECALHO
@@ -26,7 +28,17 @@ public class Programa {
 		System.out.print("Qual o ticket médio?");
 		ticketMedio = sc.nextDouble();
 
+		//LEITURA DOS OUTROS DADOS
 		
+		int quantidadeAtrasos;
+		char formaPagamento;		
+				
+		System.out.print("Quantas vezes o cliente atrasou o pagamento?");
+		quantidadeAtrasos = sc.nextInt();
+				
+		System.out.print("A maioria das compras foi em dinheiro, cartão, ou boleto (D/C/B)?");
+		formaPagamento = sc.next().charAt(0);
+
 		
 	}
 	
